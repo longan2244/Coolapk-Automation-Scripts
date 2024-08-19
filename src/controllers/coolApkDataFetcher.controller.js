@@ -41,7 +41,7 @@ class CoolApkDataFetcherController {
 
   async fetchData() {
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000 * 60));
+      await new Promise(resolve => setTimeout(resolve, 1000 * 60 * 5));
 
       console.log(globalThis.getTime() + '#✅正在轮询' + this.id);
       const { data } = await axios(this.config);
